@@ -14,20 +14,21 @@ public class SavingsAccount {
             char character = counterAccount.charAt(i);
             int characterValue = Character.getNumericValue(character);
             sum = sum + (9 - i) * characterValue;
-        }
-        if (sum % 11 == 0) {
-            // 2. Look up counter account and make transfer object:
-            CheckingAccount acct = Accounts.findAcctByNumber(counterAccount);
-            Transfer result = new Transfer(this, acct, amount); // <2>
-            // 3. Check whether withdrawal is to registered counter account:
-            if (result.getCounterAccount().equals(this.registeredCounterAccount)) 
-            {
-                return result;
+            
+            if (sum % 11 == 0) {
+                // 2. Look up counter account and make transfer object:
+                CheckingAccount acct = Accounts.findAcctByNumber(counterAccount);
+                Transfer result = new Transfer(this, acct, amount); // <2>
+                // 3. Check whether withdrawal is to registered counter account:
+                if (result.getCounterAccount().equals(this.registeredCounterAccount)) 
+                {
+                    return result;
+                } else {
+                    throw new BusinessException("Counter-account not registered!");
+                }
             } else {
-                throw new BusinessException("Counter-account not registered!");
+                throw new BusinessException("Invalid account number!!");
             }
-        } else {
-            throw new BusinessException("Invalid account number!!");
         }
     }
 
