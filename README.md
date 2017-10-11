@@ -1,4 +1,4 @@
-[![BCH compliance](https://bettercodehub.com/edge/badge/BetterCodeHubTraining/training-assignments-simple)](https://bettercodehub.com)
+[![BCH compliance](https://bettercodehub.com/edge/badge/gierg/sig-training-simple?branch=master)](https://bettercodehub.com/)
 
 Assignments for Java Quality Software Developer (QSD) training with Better Code Hub (BCH)
 ==========
