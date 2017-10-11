@@ -16,11 +16,9 @@ public class FlagFactory {
 		FLAGS.put(ITALIAN, Arrays.asList(Color.GREEN, Color.WHITE, Color.RED));
 	}
 
-    // tag::getFlag[]
     public List<Color> getFlagColors(Nationality nationality) {
         List<Color> colors = FLAGS.get(nationality);
         return colors != null ? colors : Arrays.asList(Color.GRAY);
     }
-    // end::getFlag[]
 
 }

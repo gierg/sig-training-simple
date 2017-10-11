@@ -20,4 +20,3 @@ public class CheckingAccount {
         }
     }
 }
-// end::CheckingAccount[]
