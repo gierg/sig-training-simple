@@ -7,7 +7,7 @@ import eu.sig.training.ch05.buildandsendmail.MailMessage;
 import eu.sig.training.ch05.buildandsendmail.Person;
 
 public class BuildAndSendMail {
-    // tag::buildAndSendMail[]
+
     public void buildAndSendMail(Mail mail, Person person,  EmailContent emailContent) {
         // Format the email address
         String mId = person.getFirstName().charAt(0) + "." + person.getLastName().substring(0, 7) + "@"
@@ -19,7 +19,6 @@ public class BuildAndSendMail {
         mail.getMailMan().send(mId, emailContent.getSubject(), mMessage);
     }
     
-    // end::buildAndSendMail[]
     private MailMessage formatMessage(MailFont font, String string) {
         return null;
     }
